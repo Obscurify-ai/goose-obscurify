@@ -1,0 +1,52 @@
+{
+  "name": "obscurify",
+  "engine": "openai",
+  "display_name": "Obscurify.ai",
+  "description": "Privacy-focused, OpenAI-compatible API to 200+ models (DeepSeek, GLM, Kimi, Qwen, GPT, Claude, Gemini and more) over zero-data-retention routes, with anonymous account-number sign-up",
+  "api_key_env": "OBSCURIFY_API_KEY",
+  "base_url": "https://obscurify.ai/v1/chat/completions",
+  "dynamic_models": true,
+  "skip_canonical_filtering": true,
+  "models": [
+    {
+      "name": "deepseek/deepseek-v4-flash",
+      "context_limit": 1048576
+    },
+    {
+      "name": "z-ai/glm-5.3",
+      "context_limit": 1048576
+    },
+    {
+      "name": "moonshotai/kimi-k2-0905",
+      "context_limit": 262144
+    },
+    {
+      "name": "qwen/qwen3-coder",
+      "context_limit": 262000
+    },
+    {
+      "name": "meta-llama/llama-3.3-70b-instruct",
+      "context_limit": 131072
+    },
+    {
+      "name": "openai/gpt-5.5",
+      "context_limit": 1050000
+    },
+    {
+      "name": "anthropic/claude-sonnet-5.5",
+      "context_limit": 1000000
+    },
+    {
+      "name": "google/gemini-3.8-flash",
+      "context_limit": 1048576
+    }
+  ],
+  "supports_streaming": true,
+  "model_doc_link": "https://obscurify.ai/model_cards",
+  "setup_steps": [
+    "Create an account at https://obscurify.ai (a random account number, no email)",
+    "Add a balance on the account page (the API works on every plan with a positive balance)",
+    "Open https://obscurify.ai/account and click Show API Key",
+    "Paste the sk-obs1_... key above as OBSCURIFY_API_KEY"
+  ]
+}
